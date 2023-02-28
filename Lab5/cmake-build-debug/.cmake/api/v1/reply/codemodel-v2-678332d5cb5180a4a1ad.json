@@ -1,0 +1,140 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						2
+					],
+					"jsonFile" : "directory-src-Debug-b6cf2213fc5053b67c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				},
+				{
+					"build" : "src/libraries",
+					"jsonFile" : "directory-src.libraries-Debug-677b3a0baac9c860822d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.23"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/libraries",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "project",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "math1::@85ec83a26f9c235bb539",
+					"jsonFile" : "target-math1-Debug-14438e467be900ddc664.json",
+					"name" : "math1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "math12::@85ec83a26f9c235bb539",
+					"jsonFile" : "target-math12-Debug-ae8e7c24d509c915e34f.json",
+					"name" : "math12",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "math2::@85ec83a26f9c235bb539",
+					"jsonFile" : "target-math2-Debug-dbcd2bedc6724fd9599c.json",
+					"name" : "math2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "math22::@85ec83a26f9c235bb539",
+					"jsonFile" : "target-math22-Debug-72ec7bb0cd449630746b.json",
+					"name" : "math22",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "program1::@145eef247bfb46b6828c",
+					"jsonFile" : "target-program1-Debug-8d734712f98f9282e922.json",
+					"name" : "program1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "program2::@145eef247bfb46b6828c",
+					"jsonFile" : "target-program2-Debug-810378f8bfbd3529a5f9.json",
+					"name" : "program2",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/kirillarmishev/Downloads/project/cmake-build-debug",
+		"source" : "/Users/kirillarmishev/Downloads/project"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

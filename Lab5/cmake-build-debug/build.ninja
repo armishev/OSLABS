@@ -1,0 +1,429 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: project
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/kirillarmishev/Downloads/project/cmake-build-debug/
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kirillarmishev/Downloads/project/cmake-build-debug && "/Users/kirillarmishev/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kirillarmishev/Downloads/project/cmake-build-debug && "/Users/kirillarmishev/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S/Users/kirillarmishev/Downloads/project -B/Users/kirillarmishev/Downloads/project/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/kirillarmishev/Downloads/project/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target program1
+
+
+#############################################
+# Order-only phony target for program1
+
+build cmake_object_order_depends_target_program1: phony || cmake_object_order_depends_target_math1 cmake_object_order_depends_target_math2
+
+build src/CMakeFiles/program1.dir/program1.c.o: C_COMPILER__program1_Debug /Users/kirillarmishev/Downloads/project/src/program1.c || cmake_object_order_depends_target_program1
+  DEP_FILE = src/CMakeFiles/program1.dir/program1.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  INCLUDES = -I/Users/kirillarmishev/Downloads/project/src/libraries
+  OBJECT_DIR = src/CMakeFiles/program1.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/program1.dir
+  TARGET_COMPILE_PDB = src/CMakeFiles/program1.dir/
+  TARGET_PDB = src/program1.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target program1
+
+
+#############################################
+# Link the executable src/program1
+
+build src/program1: C_EXECUTABLE_LINKER__program1_Debug src/CMakeFiles/program1.dir/program1.c.o | src/libraries/libmath1.dylib src/libraries/libmath2.dylib || src/libraries/libmath1.dylib src/libraries/libmath2.dylib
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  LINK_LIBRARIES = -Wl,-rpath,/Users/kirillarmishev/Downloads/project/cmake-build-debug/src/libraries  src/libraries/libmath1.dylib  src/libraries/libmath2.dylib
+  OBJECT_DIR = src/CMakeFiles/program1.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = src/CMakeFiles/program1.dir/
+  TARGET_FILE = src/program1
+  TARGET_PDB = src/program1.pdb
+
+# =============================================================================
+# Object build statements for EXECUTABLE target program2
+
+
+#############################################
+# Order-only phony target for program2
+
+build cmake_object_order_depends_target_program2: phony || src/CMakeFiles/program2.dir
+
+build src/CMakeFiles/program2.dir/program2.c.o: C_COMPILER__program2_Debug /Users/kirillarmishev/Downloads/project/src/program2.c || cmake_object_order_depends_target_program2
+  DEP_FILE = src/CMakeFiles/program2.dir/program2.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  INCLUDES = -I/Users/kirillarmishev/Downloads/project/src/libraries
+  OBJECT_DIR = src/CMakeFiles/program2.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/program2.dir
+  TARGET_COMPILE_PDB = src/CMakeFiles/program2.dir/
+  TARGET_PDB = src/program2.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target program2
+
+
+#############################################
+# Link the executable src/program2
+
+build src/program2: C_EXECUTABLE_LINKER__program2_Debug src/CMakeFiles/program2.dir/program2.c.o
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  OBJECT_DIR = src/CMakeFiles/program2.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = src/CMakeFiles/program2.dir/
+  TARGET_FILE = src/program2
+  TARGET_PDB = src/program2.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kirillarmishev/Downloads/project/cmake-build-debug/src && "/Users/kirillarmishev/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build src/edit_cache: phony src/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kirillarmishev/Downloads/project/cmake-build-debug/src && "/Users/kirillarmishev/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S/Users/kirillarmishev/Downloads/project -B/Users/kirillarmishev/Downloads/project/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build src/rebuild_cache: phony src/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/kirillarmishev/Downloads/project/src/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for SHARED_LIBRARY target math1
+
+
+#############################################
+# Order-only phony target for math1
+
+build cmake_object_order_depends_target_math1: phony || src/libraries/CMakeFiles/math1.dir
+
+build src/libraries/CMakeFiles/math1.dir/math1.c.o: C_COMPILER__math1_Debug /Users/kirillarmishev/Downloads/project/src/libraries/math1.c || cmake_object_order_depends_target_math1
+  DEFINES = -Dmath1_EXPORTS
+  DEP_FILE = src/libraries/CMakeFiles/math1.dir/math1.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC
+  INCLUDES = -I/Users/kirillarmishev/Downloads/project/src/libraries
+  OBJECT_DIR = src/libraries/CMakeFiles/math1.dir
+  OBJECT_FILE_DIR = src/libraries/CMakeFiles/math1.dir
+  TARGET_COMPILE_PDB = src/libraries/CMakeFiles/math1.dir/
+  TARGET_PDB = src/libraries/libmath1.pdb
+
+
+# =============================================================================
+# Link build statements for SHARED_LIBRARY target math1
+
+
+#############################################
+# Link the shared library src/libraries/libmath1.dylib
+
+build src/libraries/libmath1.dylib: C_SHARED_LIBRARY_LINKER__math1_Debug src/libraries/CMakeFiles/math1.dir/math1.c.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  INSTALLNAME_DIR = @rpath/
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = src/libraries/CMakeFiles/math1.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  SONAME = libmath1.dylib
+  SONAME_FLAG = -install_name
+  TARGET_COMPILE_PDB = src/libraries/CMakeFiles/math1.dir/
+  TARGET_FILE = src/libraries/libmath1.dylib
+  TARGET_PDB = src/libraries/libmath1.pdb
+
+# =============================================================================
+# Object build statements for SHARED_LIBRARY target math12
+
+
+#############################################
+# Order-only phony target for math12
+
+build cmake_object_order_depends_target_math12: phony || src/libraries/CMakeFiles/math12.dir
+
+build src/libraries/CMakeFiles/math12.dir/math12.c.o: C_COMPILER__math12_Debug /Users/kirillarmishev/Downloads/project/src/libraries/math12.c || cmake_object_order_depends_target_math12
+  DEFINES = -Dmath12_EXPORTS
+  DEP_FILE = src/libraries/CMakeFiles/math12.dir/math12.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC
+  INCLUDES = -I/Users/kirillarmishev/Downloads/project/src/libraries
+  OBJECT_DIR = src/libraries/CMakeFiles/math12.dir
+  OBJECT_FILE_DIR = src/libraries/CMakeFiles/math12.dir
+  TARGET_COMPILE_PDB = src/libraries/CMakeFiles/math12.dir/
+  TARGET_PDB = src/libraries/libmath12.pdb
+
+
+# =============================================================================
+# Link build statements for SHARED_LIBRARY target math12
+
+
+#############################################
+# Link the shared library src/libraries/libmath12.dylib
+
+build src/libraries/libmath12.dylib: C_SHARED_LIBRARY_LINKER__math12_Debug src/libraries/CMakeFiles/math12.dir/math12.c.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  INSTALLNAME_DIR = @rpath/
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = src/libraries/CMakeFiles/math12.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  SONAME = libmath12.dylib
+  SONAME_FLAG = -install_name
+  TARGET_COMPILE_PDB = src/libraries/CMakeFiles/math12.dir/
+  TARGET_FILE = src/libraries/libmath12.dylib
+  TARGET_PDB = src/libraries/libmath12.pdb
+
+# =============================================================================
+# Object build statements for SHARED_LIBRARY target math2
+
+
+#############################################
+# Order-only phony target for math2
+
+build cmake_object_order_depends_target_math2: phony || src/libraries/CMakeFiles/math2.dir
+
+build src/libraries/CMakeFiles/math2.dir/math2.c.o: C_COMPILER__math2_Debug /Users/kirillarmishev/Downloads/project/src/libraries/math2.c || cmake_object_order_depends_target_math2
+  DEFINES = -Dmath2_EXPORTS
+  DEP_FILE = src/libraries/CMakeFiles/math2.dir/math2.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC
+  INCLUDES = -I/Users/kirillarmishev/Downloads/project/src/libraries
+  OBJECT_DIR = src/libraries/CMakeFiles/math2.dir
+  OBJECT_FILE_DIR = src/libraries/CMakeFiles/math2.dir
+  TARGET_COMPILE_PDB = src/libraries/CMakeFiles/math2.dir/
+  TARGET_PDB = src/libraries/libmath2.pdb
+
+
+# =============================================================================
+# Link build statements for SHARED_LIBRARY target math2
+
+
+#############################################
+# Link the shared library src/libraries/libmath2.dylib
+
+build src/libraries/libmath2.dylib: C_SHARED_LIBRARY_LINKER__math2_Debug src/libraries/CMakeFiles/math2.dir/math2.c.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  INSTALLNAME_DIR = @rpath/
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = src/libraries/CMakeFiles/math2.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  SONAME = libmath2.dylib
+  SONAME_FLAG = -install_name
+  TARGET_COMPILE_PDB = src/libraries/CMakeFiles/math2.dir/
+  TARGET_FILE = src/libraries/libmath2.dylib
+  TARGET_PDB = src/libraries/libmath2.pdb
+
+# =============================================================================
+# Object build statements for SHARED_LIBRARY target math22
+
+
+#############################################
+# Order-only phony target for math22
+
+build cmake_object_order_depends_target_math22: phony || src/libraries/CMakeFiles/math22.dir
+
+build src/libraries/CMakeFiles/math22.dir/math22.c.o: C_COMPILER__math22_Debug /Users/kirillarmishev/Downloads/project/src/libraries/math22.c || cmake_object_order_depends_target_math22
+  DEFINES = -Dmath22_EXPORTS
+  DEP_FILE = src/libraries/CMakeFiles/math22.dir/math22.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC
+  INCLUDES = -I/Users/kirillarmishev/Downloads/project/src/libraries
+  OBJECT_DIR = src/libraries/CMakeFiles/math22.dir
+  OBJECT_FILE_DIR = src/libraries/CMakeFiles/math22.dir
+  TARGET_COMPILE_PDB = src/libraries/CMakeFiles/math22.dir/
+  TARGET_PDB = src/libraries/libmath22.pdb
+
+
+# =============================================================================
+# Link build statements for SHARED_LIBRARY target math22
+
+
+#############################################
+# Link the shared library src/libraries/libmath22.dylib
+
+build src/libraries/libmath22.dylib: C_SHARED_LIBRARY_LINKER__math22_Debug src/libraries/CMakeFiles/math22.dir/math22.c.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  INSTALLNAME_DIR = @rpath/
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = src/libraries/CMakeFiles/math22.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  SONAME = libmath22.dylib
+  SONAME_FLAG = -install_name
+  TARGET_COMPILE_PDB = src/libraries/CMakeFiles/math22.dir/
+  TARGET_FILE = src/libraries/libmath22.dylib
+  TARGET_PDB = src/libraries/libmath22.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build src/libraries/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kirillarmishev/Downloads/project/cmake-build-debug/src/libraries && "/Users/kirillarmishev/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build src/libraries/edit_cache: phony src/libraries/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build src/libraries/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kirillarmishev/Downloads/project/cmake-build-debug/src/libraries && "/Users/kirillarmishev/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S/Users/kirillarmishev/Downloads/project -B/Users/kirillarmishev/Downloads/project/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build src/libraries/rebuild_cache: phony src/libraries/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+build libmath1.dylib: phony src/libraries/libmath1.dylib
+
+build libmath12.dylib: phony src/libraries/libmath12.dylib
+
+build libmath2.dylib: phony src/libraries/libmath2.dylib
+
+build libmath22.dylib: phony src/libraries/libmath22.dylib
+
+build math1: phony src/libraries/libmath1.dylib
+
+build math12: phony src/libraries/libmath12.dylib
+
+build math2: phony src/libraries/libmath2.dylib
+
+build math22: phony src/libraries/libmath22.dylib
+
+build program1: phony src/program1
+
+build program2: phony src/program2
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/kirillarmishev/Downloads/project/cmake-build-debug
+
+build all: phony src/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/kirillarmishev/Downloads/project/cmake-build-debug/src
+
+build src/all: phony src/program1 src/program2 src/libraries/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/kirillarmishev/Downloads/project/cmake-build-debug/src/libraries
+
+build src/libraries/all: phony src/libraries/libmath1.dylib src/libraries/libmath12.dylib src/libraries/libmath2.dylib src/libraries/libmath22.dylib
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../src/CMakeLists.txt ../src/libraries/CMakeLists.txt /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCCompiler.cmake.in /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCCompilerABI.c /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCompilerIdDetection.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompileFeatures.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompilerABI.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompilerId.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineSystem.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeFindBinUtils.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeParseImplicitIncludeInfo.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeParseImplicitLinkInfo.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeParseLibraryArchitecture.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystem.cmake.in /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeTestCCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeTestCompilerCommon.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/ADSP-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Borland-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Cray-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GHS-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/HP-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IAR-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Intel-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/MSVC-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/PGI-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/PathScale-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/SCO-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/TI-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Watcom-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/XL-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Internal/FeatureTesting.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build ../CMakeLists.txt ../src/CMakeLists.txt ../src/libraries/CMakeLists.txt /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCCompiler.cmake.in /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCCompilerABI.c /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCompilerIdDetection.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompileFeatures.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompilerABI.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompilerId.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineSystem.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeFindBinUtils.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeParseImplicitIncludeInfo.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeParseImplicitLinkInfo.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeParseLibraryArchitecture.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystem.cmake.in /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeTestCCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeTestCompilerCommon.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/ADSP-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Borland-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Cray-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GHS-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/HP-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IAR-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Intel-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/MSVC-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/PGI-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/PathScale-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/SCO-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/TI-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Watcom-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/XL-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Internal/FeatureTesting.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Users/kirillarmishev/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all

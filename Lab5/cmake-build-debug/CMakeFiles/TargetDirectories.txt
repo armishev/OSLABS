@@ -1,0 +1,12 @@
+/Users/kirillarmishev/Downloads/project/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/kirillarmishev/Downloads/project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/kirillarmishev/Downloads/project/cmake-build-debug/src/CMakeFiles/program1.dir
+/Users/kirillarmishev/Downloads/project/cmake-build-debug/src/CMakeFiles/program2.dir
+/Users/kirillarmishev/Downloads/project/cmake-build-debug/src/CMakeFiles/edit_cache.dir
+/Users/kirillarmishev/Downloads/project/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
+/Users/kirillarmishev/Downloads/project/cmake-build-debug/src/libraries/CMakeFiles/math1.dir
+/Users/kirillarmishev/Downloads/project/cmake-build-debug/src/libraries/CMakeFiles/math12.dir
+/Users/kirillarmishev/Downloads/project/cmake-build-debug/src/libraries/CMakeFiles/math2.dir
+/Users/kirillarmishev/Downloads/project/cmake-build-debug/src/libraries/CMakeFiles/math22.dir
+/Users/kirillarmishev/Downloads/project/cmake-build-debug/src/libraries/CMakeFiles/edit_cache.dir
+/Users/kirillarmishev/Downloads/project/cmake-build-debug/src/libraries/CMakeFiles/rebuild_cache.dir
