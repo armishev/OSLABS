@@ -1,9 +1,4 @@
-include_directories(libraries)
+cmake_minimum_required(VERSION 3.13)
+project(project VERSION 1.0 LANGUAGES C)
 
-add_executable(program1 program1.c)
-add_executable(program2 program2.c)
-
-add_subdirectory(libraries)
-
-target_link_libraries(program1 math1)
-target_link_libraries(program1 math2)
+add_subdirectory(src)
